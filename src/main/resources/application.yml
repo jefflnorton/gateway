@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 30m
+
+zuul:
+  sensitive-headers: Cookie,Set-Cookie
+  routes:
+    test:
+      path: /test/**
+      url: http://localhost:8081
